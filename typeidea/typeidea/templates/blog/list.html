@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+
+
+{% block title %}
+    {% if tag %}
+        标签页: {{ tag.name }}
+    {% endif %}
+    {% if category %}
+        分类页： {{ category.name }}
+    {% endif %}
+{% endblock %}
+
+{% block main %}
+    <table border="1">
+    <thead>
+        <tr>
+
+            <td>文章标题</td>
+            <td>作者</td>
+            <td>分类</td>
+            <td>摘要</td>
+        </tr>
+    </thead>
+    {% for post in post_list%}
+        <tr>
+            <td><a href="{% url 'post_detail' post.id %}">{{post.title}}</a></td>
+            <td>{{post.owner}}</td>
+            <td>{{post.category.name}}</td>
+            <td>{{post.desc}}</td>
+        </tr>
+    {% endfor%}
+</table>
+{% endblock %}
