@@ -4,8 +4,14 @@
     <list default="true" id="0bf735b5-dcba-4d0c-8cd9-79395e0e108f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/templates/blog/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/templates/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/default/templates/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/default/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/default/templates/blog/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/default/templates/blog/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/templates/config/blocks/siderbar_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/default/templates/config/blocks/siderbar_comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/templates/config/blocks/siderbar_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/default/templates/config/blocks/siderbar_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/default/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -36,14 +43,24 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/typeidea/themes/bootstrap" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/typeidea/themes/bootstrap" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/typeidea/themes/bootstrap/static/css" />
+      <recent name="$PROJECT_DIR$/typeidea/themes/defalut" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -75,6 +92,10 @@
       <workItem from="1575446336565" duration="10206000" />
       <workItem from="1575470239252" duration="4619000" />
       <workItem from="1575480053716" duration="2706000" />
+      <workItem from="1575550806695" duration="35000" />
+      <workItem from="1575640179731" duration="613000" />
+      <workItem from="1575647295878" duration="418000" />
+      <workItem from="1575653723503" duration="4216000" />
     </task>
     <servers />
   </component>

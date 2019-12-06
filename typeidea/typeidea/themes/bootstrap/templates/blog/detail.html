@@ -1,0 +1,12 @@
+{% extends './base.html' %}
+
+{% block title %}
+   {{ post.title }}
+{% endblock %}
+
+{% block main %}
+    <h3 class="text-center">{{post.title}}&nbsp;&nbsp;<span style="font-size: 16px; font-weight: lighter; font-style: italic;color: gray">--{{post.owner.username}}</span></h3>
+    <div>
+         {{ post.content}}
+    </div>
+{% endblock %}
