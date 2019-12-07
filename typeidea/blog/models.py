@@ -1,3 +1,4 @@
+import mistune
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -75,6 +76,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255, verbose_name="标题")
     desc = models.CharField(max_length=1024, blank=True, verbose_name="摘要")
     content = models.TextField(verbose_name='正文', help_text='正文必须为 markdown 格式')
+    content_html = models.TextField(verbose_name="正文html代码", blank=True, editable=False)
     status = models.IntegerField(default=STATUS_NORMAL, choices=STATUS_ITEMS, verbose_name="状态")
     category = models.ForeignKey(Category, verbose_name='分类')
     tag = models.ManyToManyField(Tag, verbose_name='标签')
@@ -86,6 +88,10 @@ class Post(models.Model):
     class Meta:
         verbose_name = verbose_name_plural = '文章'
         ordering = ['-id']  # 根据id降序排列
+
+    def save(self, *args, **kwargs):
+        self.content_html = mistune.markdown(self.content)
+        return super(Post, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.title

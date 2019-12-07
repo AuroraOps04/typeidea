@@ -4,6 +4,7 @@ from django.db.models import Q
 
 from .models import Post, Tag, Category
 from config.models import SideBar
+from comment.forms import Comment, CommentForm
 # Create your views here.
 
 
@@ -20,13 +21,13 @@ class CommonViewMinxi:
 class IndexView(CommonViewMinxi, ListView):
     queryset = Post.latest_posts()
     template_name = 'blog/list.html'
-    paginate_by = 2
+    paginate_by = 10
     context_object_name = 'post_list'
 
 
 #   注意CommonViewMinxi必须写在前面
 class PostDetailView(CommonViewMinxi, DetailView):
-    model = Post
+    queryset = Post.latest_posts()
     template_name = 'blog/detail.html'
     context_object_name = 'post'
     #   DetailView 必须指定url中那个键作为筛选的主键.
@@ -75,3 +76,11 @@ class SearchView(IndexView):
             return queryset
         print("过滤了")
         return queryset.filter(Q(title__icontains=keyword) | Q(desc__icontains=keyword))
+
+
+class AuthorView(IndexView):
+    def get_queryset(self):
+        author = self.kwargs.get("author")
+        queryset = super().get_queryset()
+        return queryset.filter(owner=author)
+

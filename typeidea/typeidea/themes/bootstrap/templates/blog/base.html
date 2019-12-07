@@ -7,6 +7,8 @@
         <title>{% block title %}首页{% endblock %}- typeidea 博客系统</title>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    {% block extra_head%}
+    {% endblock %}
 </head>
 <body>
     <div class="container head">
@@ -42,7 +44,7 @@
                     {% for sidebar in sidebars %}
                         <div class="card-body">
                             <h4 class="card-title">{{sidebar.title}}</h4>
-                            {{sidebar.content_html}}
+                            {{sidebar.content_html | safe}}
                         </div>
 
                     {% endfor %}

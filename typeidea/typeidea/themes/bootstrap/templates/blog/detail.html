@@ -1,12 +1,19 @@
 {% extends './base.html' %}
-
+{% load comment_block %}
+{% load static %}
 {% block title %}
    {{ post.title }}
+{% endblock %}
+{% block extra_head%}
+<link rel="stylesheet" href="{% static 'css/highlight/monokai-sublime.css' %}">
+<script src="{%static 'js/highlight.js'%}"></script>
+<script >hljs.initHighlightingOnLoad();</script>
 {% endblock %}
 
 {% block main %}
     <h3 class="text-center">{{post.title}}&nbsp;&nbsp;<span style="font-size: 16px; font-weight: lighter; font-style: italic;color: gray">--{{post.owner.username}}</span></h3>
     <div>
-         {{ post.content}}
+         {{ post.content_html | safe}}
     </div>
+{% comment_block request.path %}
 {% endblock %}
