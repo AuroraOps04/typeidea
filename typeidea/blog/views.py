@@ -1,10 +1,13 @@
+from datetime import date
+
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
-from django.db.models import Q
+from django.db.models import Q, F
+from django.core.cache import cache
 
 from .models import Post, Tag, Category
 from config.models import SideBar
-from comment.forms import Comment, CommentForm
+
 # Create your views here.
 
 
@@ -32,6 +35,30 @@ class PostDetailView(CommonViewMinxi, DetailView):
     context_object_name = 'post'
     #   DetailView 必须指定url中那个键作为筛选的主键.
     pk_url_kwarg = 'post_id'
+
+    def get(self, *args, **kwargs):
+        response = super().get(*args, **kwargs)
+        self.handle_visited()
+        return response
+
+    def handle_visited(self):
+        increase_pv = False
+        increase_uv = False
+        uid = self.request.uid
+        pv_key = f'pv:{uid}:{self.request.path}'
+        uv_key = f'uv:{uid}:{str(date.today())}:{self.request.path}'
+        if not cache.get(pv_key):
+            increase_pv = True
+            cache.set(pv_key, 1, 1*60)  # 一分钟有效
+        if not cache.get(uv_key):
+            increase_uv = True
+            cache.set(uv_key, 1, 24*60*60)  # 24小时有效
+        if increase_pv and increase_pv:
+            Post.objects.filter(pk=self.object.id).update(pv=F('pv')+1, uv=F('uv')+1)
+        elif increase_pv:
+            Post.objects.filter(pk=self.object.id).update(pv=F('pv')+1)
+        elif increase_uv:
+            Post.objects.filter(pk=self.object.id).update(uv=F('uv')+1)
 
 
 class CategoryView(IndexView):

@@ -11,7 +11,8 @@
 {% endblock %}
 
 {% block main %}
-    <h3 class="text-center">{{post.title}}&nbsp;&nbsp;<span style="font-size: 16px; font-weight: lighter; font-style: italic;color: gray">--{{post.owner.username}}</span></h3>
+    <h3 class="text-center">{{post.title}}</h3>
+    <div><span>分类:{{post.category}}</span><span>&nbsp;作者:{{post.owner}}</span><span>&nbsp;创建时间:{{post.created_time}}</span><span>&nbsp;pv/uv:{{post.pv}}/{{post.uv}}</span></div>
     <div>
          {{ post.content_html | safe}}
     </div>

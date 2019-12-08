@@ -1,6 +1,7 @@
 import mistune
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.functional import cached_property
 
 
 class Category(models.Model):
@@ -83,18 +84,18 @@ class Post(models.Model):
     owner = models.ForeignKey(User, verbose_name='作者')
     created_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
     pv = models.PositiveIntegerField(default=1, verbose_name='访问量')
-    cv = models.PositiveIntegerField(default=1, )
+    uv = models.PositiveIntegerField(default=1, )
 
     class Meta:
         verbose_name = verbose_name_plural = '文章'
         ordering = ['-id']  # 根据id降序排列
 
+    def __str__(self):
+        return self.title
+
     def save(self, *args, **kwargs):
         self.content_html = mistune.markdown(self.content)
         return super(Post, self).save(*args, **kwargs)
-
-    def __str__(self):
-        return self.title
 
     @classmethod
     def get_by_tag(cls, tag_id):
@@ -127,3 +128,7 @@ class Post(models.Model):
     def hot_post(cls):
         queryset = Post.objects.filter(status=Post.STATUS_NORMAL).order_by('-pv')
         return queryset
+
+    @cached_property
+    def tags(self):
+        return ','.join(self.tag.values_list('name', flat=True))

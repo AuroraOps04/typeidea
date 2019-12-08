@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf735b5-dcba-4d0c-8cd9-79395e0e108f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typeidea/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/blog/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/blog/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/blog/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/themes/default/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,10 +35,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -127,7 +119,8 @@
       <workItem from="1575694067319" duration="255000" />
       <workItem from="1575700830062" duration="1139000" />
       <workItem from="1575711471237" duration="856000" />
-      <workItem from="1575719516593" duration="10519000" />
+      <workItem from="1575719516593" duration="15272000" />
+      <workItem from="1575784658544" duration="456000" />
     </task>
     <servers />
   </component>
