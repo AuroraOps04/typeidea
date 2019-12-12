@@ -31,6 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
+    'ckeditor_uploader',    # 文件上传的app
+
+    'dal',
+    'dal_select2',
+
+    'xadmin',
+    'crispy_forms',
+
     'typeidea',
     'blog',
     'config',
@@ -129,3 +138,26 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'themes', THEME, 'static')
 ]
+
+XADMIN_TITLE = 'Typeidea 管理后台'
+XADMIN_FOOTER_TITLE = 'power by rui tao'
+
+
+# ckeditor 样式配置
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 800,
+        'tabspaces': 4,
+        'extraPlugins': 'codesnippet'   # 配置代码插件
+    }
+}
+
+# 文件上传的配置
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+CKEDITOR_UPLOAD_PATH = 'article_images'
+
+# 设置ckedito文件上传
+DEFAULT_FILE_STORAGE = 'typeidea.storage.WatermarkStorage'

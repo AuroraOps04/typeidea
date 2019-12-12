@@ -76,8 +76,9 @@ class Post(models.Model):
 
     title = models.CharField(max_length=255, verbose_name="标题")
     desc = models.CharField(max_length=1024, blank=True, verbose_name="摘要")
-    content = models.TextField(verbose_name='正文', help_text='正文必须为 markdown 格式')
+    content = models.TextField(verbose_name='正文', help_text='正文可以为 markdown')
     content_html = models.TextField(verbose_name="正文html代码", blank=True, editable=False)
+    is_md = models.BooleanField(default=True, verbose_name="markdown 语法")
     status = models.IntegerField(default=STATUS_NORMAL, choices=STATUS_ITEMS, verbose_name="状态")
     category = models.ForeignKey(Category, verbose_name='分类')
     tag = models.ManyToManyField(Tag, verbose_name='标签')
@@ -94,7 +95,10 @@ class Post(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        self.content_html = mistune.markdown(self.content)
+        if self.is_md:
+            self.content_html = mistune.markdown(self.content)
+        else:
+            self.content_html = self.content
         return super(Post, self).save(*args, **kwargs)
 
     @classmethod

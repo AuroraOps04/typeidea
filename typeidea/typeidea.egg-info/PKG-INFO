@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: typeidea
+Version: 0.1
+Summary: Blog System base on Django
+Home-page: UNKNOWN
+Author: rui tao
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: ipython

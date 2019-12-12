@@ -1,5 +1,6 @@
 import mistune
 from django import forms
+from ckeditor.widgets import CKEditorWidget
 
 from .models import Comment
 
@@ -28,10 +29,9 @@ class CommentForm(forms.ModelForm):
     )
     content = forms.CharField(
         label='内容',
-        max_length=500,
-        widget=forms.widgets.Textarea(
-            attrs={'class': 'form-control', 'style': 'width: 60%;'},
-        )
+
+        widget=CKEditorWidget(),
+        required=True,
     )
 
     def clean_content(self):
@@ -45,3 +45,11 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['nickname', 'email', 'website', 'content']
+
+
+class PostForm(forms.ModelForm):
+    content = forms.CharField(
+        label="正文",
+        required=True,
+        widget=CKEditorWidget(),
+    )

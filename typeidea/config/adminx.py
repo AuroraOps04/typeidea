@@ -1,22 +1,25 @@
-from django.contrib import admin
+import xadmin
+from xadmin.layout import Fieldset
 
-from .models import Link, SideBar
-from typeidea.custom_site import custom_site
+from .models import SideBar, Link
 from typeidea.base_admin import BaseOwnAdmin
 # Register your models here.
 
 
-@admin.register(Link, site=custom_site)
+@xadmin.sites.register(Link)
 class LinkAdmin(BaseOwnAdmin):
     list_display = (
         'title', 'href', 'weight',
         'owner', 'created_time',
     )
 
-    fields = (
-        'title',
-        'href',
-        'weight'
+    form_layout = (
+        Fieldset(
+            '基础配置',
+            'title',
+            'href',
+            'weight'
+        )
     )
 
     def save_model(self, request, obj, form, change):
@@ -24,7 +27,7 @@ class LinkAdmin(BaseOwnAdmin):
         return super(LinkAdmin, self).save_model(request, obj, form, change)
 
 
-@admin.register(SideBar, site=custom_site)
+@xadmin.sites.register(SideBar)
 class SideBarAdmin(BaseOwnAdmin):
     list_display = (
         'title',
@@ -35,11 +38,17 @@ class SideBarAdmin(BaseOwnAdmin):
         'created_time',
     )
 
-    fields = (
-        'title',
-        'display_type',
-        'content',
-        'status',
+    form_layout = (
+        Fieldset(
+            '基础配置',
+            'title',
+            'status',
+        ),
+        Fieldset(
+            '内容配置',
+            'display_type',
+            'content',
+        )
     )
 
     def save_model(self, request, obj, form, change):

@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bf735b5-dcba-4d0c-8cd9-79395e0e108f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/blog/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/adminForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/adminForm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/base_admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/base_admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typeidea/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/blog/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/themes/bootstrap/templates/blog/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/typeidea/settings/develop.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/settings/develop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/typeidea/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/typeidea/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,9 +44,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -120,7 +128,11 @@
       <workItem from="1575700830062" duration="1139000" />
       <workItem from="1575711471237" duration="856000" />
       <workItem from="1575719516593" duration="15272000" />
-      <workItem from="1575784658544" duration="456000" />
+      <workItem from="1575784658544" duration="1989000" />
+      <workItem from="1575787694753" duration="439000" />
+      <workItem from="1575803934618" duration="8801000" />
+      <workItem from="1576135758069" duration="3363000" />
+      <workItem from="1576149601948" duration="1974000" />
     </task>
     <servers />
   </component>
